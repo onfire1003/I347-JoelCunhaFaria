@@ -1,0 +1,44 @@
+/*
+-----------------------------------------------------------------------------------------------------------------------
+file name           :   app.js
+author              :   Joel Cunha Faria
+new collaborators   :   Léo Del Duca, Loïc Roux
+old collaborators   :   Jason Edmonds, Samuel Theytaz
+creation date       :   12.03.2026
+modification date   :   29.05.2026
+version             :   1.0
+-----------------------------------------------------------------------------------------------------------------------
+
+Main application file.
+This file starts Express and exposes the ingredient, menu, and dish routes.
+*/
+
+const express = require('express');
+const cors = require('cors');
+const path = require('path');
+const app = express();
+const dishRoutes = require('./routes/dish.routes');
+const ingredientRoutes = require('./routes/ingredient.routes');
+const menuRoutes = require('./routes/menu.routes');
+
+app.use(cors());
+app.use(express.json());
+app.use('/images', express.static(path.join(__dirname, 'images')));
+app.use('/api/v1/dishes', dishRoutes);
+app.use('/api/v1/ingredients', ingredientRoutes);
+app.use('/api/v1/menus', menuRoutes);
+
+app.get('/', function (req, res) {
+    return res.status(200).json({
+        message: 'API catalogue active'
+    });
+});
+
+const env = require('./config/env');
+const PORT = env.port;
+
+app.listen(PORT, function () {
+    console.log('API disponible sur http://localhost:' + PORT);
+});
+
+module.exports = app;
