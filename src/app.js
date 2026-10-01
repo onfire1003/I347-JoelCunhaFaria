@@ -40,6 +40,7 @@ const PORT = env.port;
 
 app.listen(PORT, function () {
     console.log('API disponible sur http://localhost:' + PORT);
+    console.log('Le swagger est disponible sur http://localhost:' + PORT + '/api-docs');
 });
 
 module.exports = app;
