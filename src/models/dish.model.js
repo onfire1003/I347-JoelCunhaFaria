@@ -1,8 +1,7 @@
 /*
 -----------------------------------------------------------------------------------------------------------------------
 file name           :   dish.model.js
-author              :   Joel Cunha Faria
-collaborators       :   Jason Edmonds, Samuel Theytaz
+author              :   Joel Cunha Faria & Dylan Martini
 creation date       :   12.03.2026
 modification date   :   29.03.2026
 version             :   1.0

@@ -1,8 +1,7 @@
 /*
 -----------------------------------------------------------------------------------------------------------------------
 file name           :   menu.service.js
-author              :   Samuel Theytaz
-collaborators       :   Jason Edmonds, Joel Cunha Faria
+author              :   Joel Cunha Faria & Dylan Martini
 creation date       :   24.03.2026
 modification date   :   29.03.2026
 version             :   1.0

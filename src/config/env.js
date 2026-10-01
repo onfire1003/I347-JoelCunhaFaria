@@ -1,8 +1,7 @@
 /*
 -----------------------------------------------------------------------------------------------------------------------
 file name           :   env.js
-author              :   Samuel Theytaz
-collaborators       :   Joel Cunha Faria, Jason Edmonds
+author              :   Joel Cunha Faria & Dylan Martini
 creation date       :   12.03.2026
 modification date   :   05.06.2026
 version             :   1.0
