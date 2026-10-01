@@ -35,6 +35,12 @@ app.get('/', function (req, res) {
     });
 });
 
+app.get('/hello', function (req, res) {
+    return res.status(200).json({
+        message: 'Hello !'
+    });
+});
+
 const env = require('./config/env');
 const PORT = env.port;
 
