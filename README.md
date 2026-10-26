@@ -89,3 +89,43 @@ src/
 - Vérifiez que MySQL est démarré et que les valeurs `DB_*` de `.env` sont correctes si la connexion échoue.
 - Exécutez à nouveau le script SQL si les tables ou les données de démonstration sont absentes.
 - Vérifiez que le port indiqué dans `.env` est disponible si le serveur ne démarre pas.
+
+## Lancement de l'API avec Docker
+
+### 1. Créer le fichier `.env` à la racine du projet
+
+```env
+DB_HOST=localhost
+DB_USER=root
+DB_PASSWORD=root
+DB_NAME=app_macdo
+PORT=3000
+```
+
+### 2. Construire l'image Docker
+
+```powershell
+docker build -t api-mcdo .
+```
+
+### 3. Créer et lancer le conteneur
+
+```powershell
+docker run -d --name mcdo-api -p 3002:3000 --env-file .env -e DB_HOST=host.docker.internal api-mcdo
+```
+
+### 4. Tester l'API
+
+```powershell
+curl.exe http://localhost:3002/
+```
+
+```powershell
+curl.exe http://localhost:3002/hello
+```
+
+### 5. Vérifier le conteneur (facultatif)
+
+```powershell
+docker ps
+```
